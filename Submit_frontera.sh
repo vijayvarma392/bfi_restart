@@ -22,4 +22,5 @@ Machine="Frontera"
 .bfi_restart/Restart.sh $ProjectNumberOrName $SLURM_JOB_NAME $SLURM_JOB_ID $EMAIL $Machine
 
 # Resumbmit the job to slurm
+ssh login1.frontera.tacc.utexas.edu
 sbatch -J $ProjectNumberOrName --export=ALL,EMAIL=$EMAIL .bfi_restart/Submit.sh
