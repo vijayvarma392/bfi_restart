@@ -20,9 +20,12 @@ ln -s Submit_minerva.sh Submit.sh
 ### Launch
 ```shell
 cd ~
-sbatch -J <BFIProject> --export=EMAIL=<YOUREMAIL> .bfi_restart/Submit.sh
+sbatch -J <BFIProject> --export=ALL,EMAIL=<YOUREMAIL> .bfi_restart/Submit.sh
 ```
-For example, `<BFIProject>="q8_7d"` and `<YOUREMAIL>="vijay.varma392@gmail.com"`.
+For example, `<BFIProject>=q8_7d` and `<YOUREMAIL>=vijay.varma392@gmail.com`.
+So, `sbatch -J q8_7d --export=ALL,EMAIL=vijay.varma392@gmail.com .bfi_restart/Submit.sh`.
+
+Be careful about the format!
 
 This will stay in queue for two days, run RestartProject, relaunch itself,
 stay in queue for two days, and so on. So, in effect, RestartProject is

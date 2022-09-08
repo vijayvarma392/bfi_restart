@@ -11,15 +11,14 @@
 
 umask 0022
 
-#NOTE: Submit this from $HOME, with format:
-# sbatch -J <ProjectNumberOrName> --export=EMAIL="<YOUREMAIL>" .bfi_restart/Submit.sh
-# Example:
-# sbatch -J "q8_7d" --export=EMAIL="vijay.varma392@gmail.com" .bfi_restart/Submit.sh
+# See README.md for usage.
 
-# BFI project. Edit Job name above if you want to edit this.
+# BFI project. Edit Job name in command line args if you want to edit this.
 ProjectNumberOrName=$SLURM_JOB_NAME
 
-.bfi_restart/Restart.sh $ProjectNumberOrName $SLURM_JOB_NAME $SLURM_JOB_ID $EMAIL
+Machine="Minerva"
+
+.bfi_restart/Restart.sh $ProjectNumberOrName $SLURM_JOB_NAME $SLURM_JOB_ID $EMAIL $Machine
 
 # Resumbmit the job to slurm
-sbatch -J $ProjectNumberOrName --export=EMAIL=$EMAIL .bfi_restart/Submit.sh 
+sbatch -J $ProjectNumberOrName --export=ALL,EMAIL=$EMAIL .bfi_restart/Submit.sh
