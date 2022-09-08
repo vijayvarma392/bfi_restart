@@ -7,7 +7,7 @@
 #SBATCH -p nr                     # Queue name
 #SBATCH -t 1:0:00                 # Run time
 #SBATCH --no-requeue
-#SBATCH --begin now+1minute        # Stay in pending for 2 days
+#SBATCH --begin now+2days        # Stay in pending for 2 days
 
 umask 0022
 
