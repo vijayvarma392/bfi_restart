@@ -9,7 +9,7 @@ ProjectNumberOrName=$1
 JobName=$2
 JobID=$3
 EMAIL=$4
-Machine=$4
+Machine=$5
 
 # Get node number as well
 ThisMachine=$Machine"_"$(hostname -s)
