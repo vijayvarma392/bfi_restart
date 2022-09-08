@@ -27,7 +27,9 @@ run once every two days. It will also send you an email with a summary.
 cd ~
 sbatch -J <BFIProject> --export=ALL,EMAIL=<YOUREMAIL> .bfi_restart/Submit.sh
 ```
+
 For example, `<BFIProject>=q8_7d` and `<YOUREMAIL>=vijay.varma@aei.mpg.de`.
+
 So, `sbatch -J q8_7d --export=ALL,EMAIL=vijay.varma@aei.mpg.de .bfi_restart/Submit.sh`.
 
 Be careful about the format!
