@@ -14,6 +14,10 @@ umask 0022
 
 # See README.md for usage.
 
+# The first time you run this, BFI_HOME and BFI_USER should be set. In the
+# resubmissions below, it will get passed.
+export PATH=$PATH:$BFI_HOME/Scripts/bin:$BFI_HOME/SpEC/Support/bin
+
 # BFI project. Edit Job name in command line args if you want to edit this.
 ProjectNumberOrName=$SLURM_JOB_NAME
 
@@ -22,4 +26,4 @@ Machine="Frontera"
 .bfi_restart/Restart.sh $ProjectNumberOrName $SLURM_JOB_NAME $SLURM_JOB_ID $EMAIL $Machine
 
 # Resumbmit the job to slurm, but do it from a login node becasue Frontera
-ssh login1.frontera.tacc.utexas.edu "sbatch -J $ProjectNumberOrName --export=ALL,EMAIL=$EMAIL .bfi_restart/Submit.sh"
+ssh login1.frontera.tacc.utexas.edu "sbatch -J $ProjectNumberOrName --export=ALL,EMAIL=$EMAIL,BFI_HOME=$BFI_HOME,BFI_USER=$BFI_USER .bfi_restart/Submit.sh"
