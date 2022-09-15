@@ -2,7 +2,7 @@
 set -eu
 
 # Usage:
-# ./Restart.sh <ProjectNumberOrName> <SLURM_JOB_NAME> <SLURM_JOB_ID> <YOUREMAIL>
+# ./Restart.sh <ProjectNumberOrName> <SLURM_JOB_NAME> <SLURM_JOB_ID> <YOUR_EMAIL> <MACHINE_NAME>
 #
 # Get command line arguments
 ProjectNumberOrName=$1
