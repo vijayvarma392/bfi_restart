@@ -4,7 +4,7 @@ Script to automatically run RestartProject regularly with slurm
 ## Instructions
 
 ### Clone
-Important to do this in home, and to rename file to make it hidden.
+Important to do this in home, and to rename the directory to make it hidden.
 ```shell
 cd ~
 git clone git@github.com:vijayvarma392/bfi_restart.git .bfi_restart
