@@ -32,8 +32,8 @@ For example, `<BFIProject>=q8_7d` and `<YOUREMAIL>=vijay.varma@aei.mpg.de`.
 
 So, `sbatch -J q8_7d --export=ALL,EMAIL=vijay.varma@aei.mpg.de .bfi_restart/Submit.sh`.
 
-Be careful about the format!
-Note: Gmail may be less relaible than academic emails.
+Be careful about the format!   
+Note: Gmail may be less reliable than academic emails. Also, use your own damn email, not mine!  
 
 ### Terminate
 When you are done with the project, remove the job using `scancel`.
