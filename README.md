@@ -33,7 +33,11 @@ For example, `<BFIProject>=q8_7d` and `<YOUREMAIL>=vijay.varma@aei.mpg.de`.
 So, `sbatch -J q8_7d --export=ALL,EMAIL=vijay.varma@aei.mpg.de .bfi_restart/Submit.sh`.
 
 Be careful about the format!   
-Note: Gmail may be less reliable than academic emails. Also, use your own damn email, not mine!  
+Note: Gmail may be less reliable than academic emails. Also, use your own damn email, not mine!
+
+Note: As with any slurm job, this can occasionally get killed.   
+This job should appear with `jobname=<BFIProject>`, so if you don't find it after a while, you may want to relaunch it.
 
 ### Terminate
-When you are done with the project, remove the job using `scancel`.
+When you are done with the project, remove the job using `scancel`.   
+Don't forget to do this, as otherwise, it will just keep trying to restart forever!
