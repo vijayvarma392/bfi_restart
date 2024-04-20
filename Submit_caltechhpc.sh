@@ -4,7 +4,7 @@
 #SBATCH -n 1                      # Number of cores
 #SBATCH --ntasks-per-node 1       # number of MPI ranks per node
 #SBATCH -N 1                      # number of nodes
-#SBATCH -p any                    # Queue name
+#SBATCH -p expansion                    # Queue name
 #SBATCH -A sxs                    # Account name
 #SBATCH -t 1:0:00                 # Run time
 #SBATCH --no-requeue
