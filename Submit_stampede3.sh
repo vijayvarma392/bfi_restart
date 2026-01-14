@@ -14,6 +14,10 @@ umask 0022
 
 # See README.md for usage.
 
+# The first time you run this, BFI_HOME and BFI_USER should be set. In the
+# resubmissions below, it will get passed.
+export PATH=$PATH:$BFI_HOME/Scripts/bin:$BFI_HOME/SpEC/Support/bin
+
 # BFI project. Edit Job name in command line args if you want to edit this.
 ProjectNumberOrName=$SLURM_JOB_NAME
 
